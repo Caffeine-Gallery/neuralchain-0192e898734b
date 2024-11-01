@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICP.ai - Enterprise AI Infrastructure</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="brand">
+            <div class="logo">ICP.ai</div>
+        </div>
+        <div class="nav-links">
+            <a href="#platform">Platform</a>
+            <a href="#products">Products</a>
+            <a href="#developers">Developers</a>
+            <a href="#pricing">Pricing</a>
+            <button class="button button-primary" id="startBuildingBtn">Start Building</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="brands">
+            <div class="brand-pill">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                </svg>
+                <span class="text">Internet Computer</span>
+            </div>
+            <div class="brand-pill">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="text">Caffeine</span>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Deploy AI on the blockchain</h1>
+            <p>Built on ICP's revolutionary blockchain technology, Caffeine enables instant AI deployment with zero infrastructure setup.</p>
+            <div class="button-group">
+                <button class="button button-primary" id="getStartedBtn">Get Started</button>
+                <button class="button button-secondary" id="viewDocsBtn">View Documentation</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h3>Zero Infrastructure</h3>
+                <p>Deploy AI models directly on the blockchain with no server setup or maintenance required.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </div>
+                <h3>Instant Deployment</h3>
+                <p>Go from development to production in minutes with our streamlined deployment process.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3>Enterprise Security</h3>
+                <p>Bank-grade security with the immutability and transparency of blockchain technology.</p>
+            </div>
+        </div>
+
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-dot" style="background: #ff5f56;"></div>
+                <div class="terminal-dot" style="background: #ffbd2e;"></div>
+                <div class="terminal-dot" style="background: #27c93f;"></div>
+            </div>
+            <div class="terminal-content" id="terminalContent">
+                <div class="terminal-line">
+                    <span class="prompt">$</span>
+                    <span class="command">deploy model.caffeine --network icp</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

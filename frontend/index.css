@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+:root {
+    --primary: #635bff;
+    --primary-dark: #4c45d9;
+    --gradient-primary: linear-gradient(135deg, #635bff 0%, #7a73ff 100%);
+    --gradient-secondary: linear-gradient(135deg, #424770 0%, #635bff 100%);
+    --surface: #fff;
+    --text-primary: #1a1f36;
+    --text-secondary: #425466;
+    --radius: 12px;
+    --radius-sm: 8px;
+}
+
+body {
+    background: var(--surface);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    padding: 1.25rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.button-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+}
+
+.button-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 91, 255, 0.2);
+}
+
+.button-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.button-secondary:hover {
+    background: rgba(99, 91, 255, 0.05);
+    transform: translateY(-1px);
+}
+
+.hero {
+    padding: 180px 24px 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(99, 91, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.brands {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.brand-pill {
+    padding: 0.625rem 1.25rem;
+    background: white;
+    border: 1px solid rgba(99, 91, 255, 0.1);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.brand-pill:hover {
+    border-color: var(--primary);
+    transform: translateY(-1px);
+    transition: all 0.2s;
+}
+
+.brand-pill .icon {
+    width: 20px;
+    height: 20px;
+    stroke: var(--primary);
+}
+
+.brand-pill .text {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.9375rem;
+}
+
+.features {
+    padding: 120px 24px;
+    background: linear-gradient(180deg, #fff 0%, rgba(99, 91, 255, 0.02) 100%);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 2rem;
+    border-radius: var(--radius);
+    background: white;
+    border: 1px solid rgba(99, 91, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(99, 91, 255, 0.06);
+    border-color: var(--primary);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background: rgba(99, 91, 255, 0.04);
+    border-radius: var(--radius-sm);
+}
+
+.feature-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--primary);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.terminal {
+    max-width: 800px;
+    margin: 4rem auto;
+    background: var(--text-primary);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08);
+}
+
+.terminal-header {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-content {
+    padding: 1.5rem;
+    font-family: 'Monaco', monospace;
+    color: #fff;
+    line-height: 1.8;
+}
+
+.terminal-line {
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.prompt {
+    color: var(--primary);
+    margin-right: 0.5rem;
+}
+
+.command {
+    color: #fff;
+}
+
+.output {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.success {
+    color: #32D74B;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    .brands {
+        flex-direction: column;
+    }
+}
